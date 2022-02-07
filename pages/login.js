@@ -2,13 +2,13 @@ import React, { useEffect } from 'react';
 import tw from "tailwind-styled-components"
 import { useRouter } from "next/router";
 import { signInWithPopup, onAuthStateChanged } from 'firebase/auth'
-import { auth, provider } from '../firebase'
+import { auth, googleProvider } from '../firebase'
 
 export default function login() {
     const router = useRouter()
 
     useEffect(() => {
-        onAuthStateChanged((auth, user) => {
+        onAuthStateChanged(auth, (user) => {
             if (user) {
                 router.push('/');
             }
@@ -20,7 +20,7 @@ export default function login() {
             <UberLogo src="https://i.ibb.co/n6LWQM4/Post.png"/>
             <Title>Log in to access your account.</Title>
             <HeadImage src="https://i.ibb.co/CsV9RYZ/login-image.png"/>
-            <SignInButton onClick={()=>signInWithPopup(auth,provider)}>
+            <SignInButton onClick={() => signInWithPopup(auth, googleProvider)}>
                 Sign in with Google
             </SignInButton>
         </Wrapper>

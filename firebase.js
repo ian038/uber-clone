@@ -1,7 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { GoogleAuthProvider, getAuth } from 'firebase/auth'
 
-
 const firebaseConfig = {
   apiKey: "AIzaSyCxcJPzA_M9gH6PvkbOyEHXSGmPCG7GiZM",
   authDomain: "uber-clone-a66fe.firebaseapp.com",

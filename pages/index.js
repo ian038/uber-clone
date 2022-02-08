@@ -37,10 +37,10 @@ export default function Home() {
         </Header>
         <ActionButtons>
           <Link href="/search">
-          <ActionButton>
-            <ActionButtonImage src="https://i.ibb.co/cyvcpfF/uberx.png"/>
-            Ride
-          </ActionButton>
+            <ActionButton>
+              <ActionButtonImage src="https://i.ibb.co/cyvcpfF/uberx.png"/>
+              Ride
+            </ActionButton>
           </Link>
           <ActionButton>
           <ActionButtonImage src="https://i.ibb.co/n776JLm/bike.png"/>

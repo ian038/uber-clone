@@ -3,7 +3,8 @@ import Link from 'next/link';
 import tw from "tailwind-styled-components";
 import { useRouter } from "next/router";
 import { onAuthStateChanged, signOut } from 'firebase/auth'
-import { auth} from '../firebase'
+import { auth } from '../firebase'
+import Map from '../components/Map';
 
 export default function Home() {
   const [user, setUser] = useState(null)
@@ -25,6 +26,7 @@ export default function Home() {
 
   return (
     <Wrapper>
+      <Map pickup={[]} dropoff={[]} />
       <ActionItems>
         <Header>
           <UberLogo src="https://i.ibb.co/84stgjq/uber-technologies-new-20218114.jpg"/>

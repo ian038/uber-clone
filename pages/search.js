@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Search() {
     const [pickup, setPickup] = useState("");
-	const [dropoff, setDropoff] = useState("");
+	  const [dropoff, setDropoff] = useState("");
 
     return (
         <Wrapper>
@@ -45,8 +45,8 @@ export default function Search() {
                 href={{
                     pathname: "/confirm",
                     query: {
-                        pickupString: pickup,
-                        dropoffString: dropoff
+                      pickup: pickup,
+                      dropoff: dropoff
                     }
                 }}
             >

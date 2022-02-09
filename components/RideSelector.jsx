@@ -10,7 +10,7 @@ export default function RideSelector({ pickup, dropoff }) {
             ?access_token=pk.eyJ1IjoiaWFuMDM4IiwiYSI6ImNrejRkdWVscDBmZzgyb28yOGVjazFkaWMifQ.rpr-o9cBKiJ2PGh8K8VzXA`)
           .then(res => res.json()).then(data => {
             console.log(data)
-            setRideDuration(data.routes[0]?.duration /60 / 100);
+            setRideDuration(data.routes[0].duration /60 / 100);
           });
     }, [pickup,dropoff]);
 

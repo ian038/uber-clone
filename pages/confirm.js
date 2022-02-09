@@ -3,8 +3,9 @@ import tw from "tailwind-styled-components";
 import Map from "../components/Map";
 import { useRouter } from "next/router";
 import Link from 'next/link'
+import RideSelector from '../components/RideSelector'
 
-export default function confirm() {
+export default function Confirm() {
     const router = useRouter();
     const { pickup, dropoff } = router.query;
   
@@ -52,6 +53,10 @@ export default function confirm() {
             dropoff={dropoffCoordinates}
             />
             <RideContainer>
+                <RideSelector
+                pickup={pickupCoordinates}
+                dropoff={dropoffCoordinates}
+                />
                 <ConfirmButtonContainer>
                     <ConfirmButton>Confirm Uber</ConfirmButton>
                 </ConfirmButtonContainer>
